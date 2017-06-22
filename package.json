@@ -5,11 +5,16 @@
   "description": "Mercuri API",
   "keywords": [],
   "dependencies": {
+    "async": "^2.4.1",
     "ejs": "^2.5.6",
-    "include-all": "^1.0.0",
+    "include-all": "^1.0.8",
+    "lodash": "^4.17.4",
+    "memori": "^1.1.0",
     "rc": "1.0.1",
     "sails": "~0.12.13",
-    "sails-disk": "~0.10.9"
+    "sails-disk": "~0.10.9",
+    "stderror": "^0.2.1",
+    "winston": "^2.3.1"
   },
   "scripts": {
     "debug": "node debug app.js",
