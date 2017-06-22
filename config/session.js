@@ -21,8 +21,10 @@ module.exports.session = {
   * of your users, forcing them to log in again.                             *
   *                                                                          *
   ***************************************************************************/
-  secret: '45fcc515cf4e27465c0a7797ec3d1287',
-
+  secret: "45fcc515cf4e27465c0a7797ec3d1287",
+  key: "session",
+  resave: false,
+  saveUninitialized: false,
 
   /***************************************************************************
   *                                                                          *
@@ -44,7 +46,7 @@ module.exports.session = {
   *                                                                          *
   ***************************************************************************/
 
-  // adapter: 'redis',
+  adapter: "redis",
 
   /***************************************************************************
   *                                                                          *
@@ -55,12 +57,17 @@ module.exports.session = {
   *                                                                          *
   ***************************************************************************/
 
-  // host: 'localhost',
-  // port: 6379,
-  // ttl: <redis session TTL in seconds>,
-  // db: 0,
-  // pass: <redis auth password>,
-  // prefix: 'sess:',
+  host: "localhost",
+  port: 6379,
+  ttl: 60*60*24, //-- 24 hours
+  db: 0,
+  pass: "",
+  prefix: "session:",
+
+  //-- for secured cookie (only works in https)
+  // cookie: {
+  //   secure: true
+  // },
 
 
   /***************************************************************************
@@ -74,8 +81,8 @@ module.exports.session = {
   *                                                                          *
   ***************************************************************************/
 
-  // adapter: 'mongo',
-  // url: 'mongodb://user:password@localhost:27017/dbname', // user, password and port optional
+  // adapter: "mongo",
+  // url: "mongodb://user:password@localhost:27017/dbname", // user, password and port optional
 
   /***************************************************************************
   *                                                                          *
@@ -89,7 +96,7 @@ module.exports.session = {
   *                                                                          *
   ***************************************************************************/
 
-  // collection: 'sessions',
+  // collection: "sessions",
   // stringify: true,
   // mongoOptions: {
   //   server: {
