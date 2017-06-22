@@ -6,4 +6,4 @@ CREATE TABLE IF NOT EXISTS signups (
   updated_at  timestamp NOT NULL DEFAULT now(),
   PRIMARY KEY (`id`),
   UNIQUE KEY (`email`)
-);
+) ENGINE = INNODB;
